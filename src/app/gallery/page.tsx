@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import MobileNav from "@/components/MobileNav";
+import { withBasePath } from "@/lib/basePath";
 
 export default function Gallery() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -43,18 +44,17 @@ export default function Gallery() {
 
   // All 12 images from public/images/Gallery with real pixel dimensions
   const galleryImages = [
-    { src: "/images/Gallery/1.jpg", w: 2252, h: 4000 }, // portrait 9:16
-    { src: "/images/Gallery/2.jpg", w: 1080, h: 1920 }, // portrait 9:16
-    { src: "/images/Gallery/20240511_181347.jpg", w: 6752, h: 12000 }, // portrait 9:16
-    { src: "/images/Gallery/20240615_120757_013.jpg", w: 2252, h: 4000 }, // portrait 9:16
-    { src: "/images/Gallery/20240615_120912_003.jpg", w: 2252, h: 4000 }, // portrait 9:16
-    { src: "/images/Gallery/20240727_180457.jpg", w: 2252, h: 4000 }, // portrait 9:16
-    { src: "/images/Gallery/3.jpg", w: 9000, h: 12000 }, // portrait 3:4
-    { src: "/images/Gallery/4.jpg", w: 2252, h: 4000 }, // portrait 9:16
-    { src: "/images/Gallery/5jpg.jpg", w: 2252, h: 4000 }, // portrait 9:16
-    { src: "/images/Gallery/IMG_0118.PNG", w: 1290, h: 1569 }, // near-square tall
-    { src: "/images/Gallery/IMG_0119.PNG", w: 1290, h: 976 }, // landscape
-    { src: "/images/Gallery/Snapchat-403151647.jpg", w: 2052, h: 3648 }, // portrait 9:16
+    { src: withBasePath("/images/Gallery/1.jpg"), w: 2252, h: 4000 }, // portrait 9:16
+    { src: withBasePath("/images/Gallery/2.jpg"), w: 1080, h: 1920 }, // portrait 9:16
+    { src: withBasePath("/images/Gallery/20240511_181347.jpg"), w: 6752, h: 12000 }, // portrait 9:16
+    { src: withBasePath("/images/Gallery/20240615_120757_013.jpg"), w: 2252, h: 4000 }, // portrait 9:16
+    { src: withBasePath("/images/Gallery/20240615_120912_003.jpg"), w: 2252, h: 4000 }, // portrait 9:16
+    { src: withBasePath("/images/Gallery/3.jpg"), w: 9000, h: 12000 }, // portrait 3:4
+    { src: withBasePath("/images/Gallery/4.jpg"), w: 2252, h: 4000 }, // portrait 9:16
+    { src: withBasePath("/images/Gallery/5jpg.jpg"), w: 2252, h: 4000 }, // portrait 9:16
+    { src: withBasePath("/images/Gallery/IMG_0118.PNG"), w: 1290, h: 1569 }, // near-square tall
+    { src: withBasePath("/images/Gallery/IMG_0119.PNG"), w: 1290, h: 976 }, // landscape
+    { src: withBasePath("/images/Gallery/Snapchat-403151647.jpg"), w: 2052, h: 3648 }, // portrait 9:16
   ];
 
   const milestones = [
@@ -216,7 +216,7 @@ export default function Gallery() {
               loop
               playsInline
             >
-              <source src="/images/Video.MP4" type="video/mp4" />
+              <source src={withBasePath("/images/Video.MP4")} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
 

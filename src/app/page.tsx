@@ -1,6 +1,8 @@
 "use client";
 import { useEffect } from "react";
+import Link from "next/link";
 import MobileNav from "@/components/MobileNav";
+import { withBasePath } from "@/lib/basePath";
 
 export default function Home() {
   useEffect(() => {
@@ -48,10 +50,10 @@ export default function Home() {
             Srinivas Prasad R
           </span>
           <div className="hidden md:flex items-center gap-10">
-            <a className="font-body-md text-body-md text-primary font-bold border-b-2 border-primary" href="#">Home</a>
-            <a className="font-body-md text-body-md text-on-surface-variant opacity-80 hover:opacity-100 hover:text-primary transition-all duration-300" href="/yoga">Yoga</a>
-            <a className="font-body-md text-body-md text-on-surface-variant opacity-80 hover:opacity-100 hover:text-primary transition-all duration-300" href="/fitness">Fitness</a>
-            <a className="font-body-md text-body-md text-on-surface-variant opacity-80 hover:opacity-100 hover:text-primary transition-all duration-300" href="/gallery">Gallery</a>
+            <Link className="font-body-md text-body-md text-primary font-bold border-b-2 border-primary" href="/">Home</Link>
+            <Link className="font-body-md text-body-md text-on-surface-variant opacity-80 hover:opacity-100 hover:text-primary transition-all duration-300" href="/yoga">Yoga</Link>
+            <Link className="font-body-md text-body-md text-on-surface-variant opacity-80 hover:opacity-100 hover:text-primary transition-all duration-300" href="/fitness">Fitness</Link>
+            <Link className="font-body-md text-body-md text-on-surface-variant opacity-80 hover:opacity-100 hover:text-primary transition-all duration-300" href="/gallery">Gallery</Link>
           </div>
           <MobileNav activePage="home" />
         </div>
@@ -67,7 +69,7 @@ export default function Home() {
                 <img
                   className="w-full h-full object-cover rounded-lg"
                   alt="Srinivas Prasad R"
-                  src="/images/hero.PNG"
+                  src={withBasePath("/images/hero.PNG")}
                 />
               </div>
             </div>
@@ -101,12 +103,12 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                   </svg>
                 </a>
-                <a
+                <Link
                   href="/gallery"
                   className="border border-primary text-primary px-8 py-4 rounded-full font-label-caps uppercase tracking-widest hover:bg-primary/5 transition-all duration-500 text-center flex items-center justify-center text-sm"
                 >
                   Gallery
-                </a>
+                </Link>
               </div>
             </div>
           </div>

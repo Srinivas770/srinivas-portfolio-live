@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 interface MobileNavProps {
   activePage: "home" | "yoga" | "fitness" | "gallery";
@@ -104,7 +105,7 @@ export default function MobileNav({ activePage }: MobileNavProps) {
               }}
             >
               {links.map((link) => (
-                <a
+                <Link
                   key={link.id}
                   href={link.href}
                   onClick={() => setOpen(false)}
@@ -125,7 +126,7 @@ export default function MobileNav({ activePage }: MobileNavProps) {
                     <span style={{ width: 3, height: 20, backgroundColor: "#52621c", borderRadius: 2, marginRight: 12, flexShrink: 0 }} />
                   )}
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

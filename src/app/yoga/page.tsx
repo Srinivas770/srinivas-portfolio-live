@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import MobileNav from "@/components/MobileNav";
+import { withBasePath } from "@/lib/basePath";
 
 export default function Yoga() {
   useEffect(() => {
@@ -38,7 +39,7 @@ export default function Yoga() {
               <img
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 alt="Yoga practice"
-                src="/images/yoga.PNG"
+                src={withBasePath("/images/yoga.PNG")}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 md:bottom-12 md:left-12 md:right-12 text-white">

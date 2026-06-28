@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import MobileNav from "@/components/MobileNav";
+import { withBasePath } from "@/lib/basePath";
 
 export default function Fitness() {
   useEffect(() => {
@@ -67,7 +68,7 @@ export default function Fitness() {
               <div key={i} className="group relative overflow-hidden rounded-3xl h-[280px] sm:h-[380px] md:h-[550px] shadow-2xl">
                 <div
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105"
-                  style={{ backgroundImage: `url('${src}')` }}
+                  style={{ backgroundImage: `url('${withBasePath(src)}')` }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               </div>
