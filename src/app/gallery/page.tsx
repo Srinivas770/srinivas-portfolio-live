@@ -227,7 +227,7 @@ export default function Gallery() {
             <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between">
               <div>
                 <span className="text-white/50 text-xs uppercase tracking-widest">Srinivas Prasad R</span>
-                <p className="text-white font-headline-md text-lg font-bold mt-1">Glimpse of Cage</p>
+                <p className="text-white font-headline-md text-lg font-bold mt-1">Glimpse From Cage</p>
               </div>
               <div className="flex gap-3">
                 <button
