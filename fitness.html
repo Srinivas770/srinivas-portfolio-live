@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fitness &amp; Skills | Srinivas Prasad R</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .grain-texture {
+            background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+        }
+        .circular-progress {
+            --progress: 0;
+            background: radial-gradient(closest-side, white 79%, transparent 80% 100%),
+                        conic-gradient(var(--tw-color-primary) calc(var(--progress) * 1%), #e4e2e1 0);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-variant": "#e4e2e1",
+                      "on-surface": "#1b1c1c",
+                      "on-error": "#ffffff",
+                      "error": "#ba1a1a",
+                      "on-background": "#1b1c1c",
+                      "background": "#fbf9f8",
+                      "surface-container": "#f0eded",
+                      "outline": "#767869",
+                      "tertiary-container": "#737573",
+                      "on-tertiary-container": "#fdfdfa",
+                      "primary-fixed-dim": "#bbcf7c",
+                      "on-primary-container": "#fbffe4",
+                      "on-secondary-fixed": "#00210c",
+                      "surface-container-low": "#f6f3f2",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary-fixed-variant": "#454745",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-bright": "#fbf9f8",
+                      "secondary-fixed": "#baefc2",
+                      "on-tertiary": "#ffffff",
+                      "primary": "#52621c",
+                      "inverse-primary": "#bbcf7c",
+                      "on-error-container": "#93000a",
+                      "tertiary-fixed-dim": "#c6c7c4",
+                      "secondary-container": "#b7edbf",
+                      "on-primary-fixed-variant": "#3d4c05",
+                      "on-surface-variant": "#46483b",
+                      "tertiary-fixed": "#e2e3e0",
+                      "primary-container": "#6a7c32",
+                      "outline-variant": "#c6c8b6",
+                      "surface": "#fbf9f8",
+                      "on-secondary-fixed-variant": "#20502e",
+                      "surface-container-highest": "#e4e2e1",
+                      "primary-fixed": "#d7ec95",
+                      "surface-tint": "#54651e",
+                      "surface-container-high": "#eae7e7",
+                      "surface-dim": "#dcd9d9",
+                      "secondary": "#386844",
+                      "tertiary": "#5b5c5a",
+                      "inverse-on-surface": "#f3f0f0",
+                      "inverse-surface": "#303030",
+                      "on-tertiary-fixed": "#1a1c1b",
+                      "on-primary": "#ffffff",
+                      "on-secondary-container": "#3d6d48",
+                      "error-container": "#ffdad6",
+                      "on-primary-fixed": "#161e00",
+                      "secondary-fixed-dim": "#9fd3a7"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "margin-desktop": "80px",
+                      "container-max": "1280px",
+                      "unit": "8px",
+                      "section-gap": "120px",
+                      "margin-mobile": "20px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Playfair Display"],
+                      "body-lg": ["Inter"],
+                      "display-lg": ["Playfair Display"],
+                      "headline-lg-mobile": ["Playfair Display"],
+                      "headline-lg": ["Playfair Display"],
+                      "display-lg-mobile": ["Playfair Display"],
+                      "body-md": ["Inter"],
+                      "label-caps": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "display-lg": ["80px", {"lineHeight": "96px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                      "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "400"}],
+                      "display-lg-mobile": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/20 backdrop-blur-xl border-b border-white/20 shadow-[0_20px_40px_rgba(0,0,0,0.04)] transition-shadow duration-500">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-6">
+<a class="font-headline-md text-headline-md text-primary font-bold tracking-tight" href="#">Srinivas Prasad R</a>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-body-md text-body-md text-on-surface-variant opacity-80 hover:opacity-100 hover:text-primary transition-all duration-300" href="#">Home</a>
+<a class="font-body-md text-body-md text-on-surface-variant opacity-80 hover:opacity-100 hover:text-primary transition-all duration-300" href="#">Yoga</a>
+<a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary transition-all duration-300" href="#">Fitness</a>
+<a class="font-body-md text-body-md text-on-surface-variant opacity-80 hover:opacity-100 hover:text-primary transition-all duration-300" href="#">Gallery</a>
+<a class="font-body-md text-body-md text-on-surface-variant opacity-80 hover:opacity-100 hover:text-primary transition-all duration-300" href="#">Contact</a>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-label-caps uppercase tracking-widest hover:bg-primary-container transition-colors duration-300">Book a Session</button>
+</div>
+<!-- Mobile Menu Icon -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main>
+<!-- SECTION 6: FITNESS TRAINING -->
+<section class="pt-40 pb-section-gap relative overflow-hidden grain-texture bg-surface-container-lowest">
+<!-- Decorative Element -->
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row gap-16 items-start mb-24">
+<div class="md:w-1/2">
+<span class="font-label-caps text-label-caps text-primary tracking-[0.2em] uppercase block mb-4">Elite Training</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-8">Training Philosophy</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
+                            True fitness isn't just about strength; it's about the harmony between physical capability and mental resilience. My approach integrates modern science with ancient movement arts to build bodies that are as durable as they are powerful.
+                        </p>
+</div>
+<div class="md:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Philosophy Pillars -->
+<div class="glass-card p-8 rounded-xl border-outline-variant/30 hover:translate-y-[-8px] transition-transform duration-500">
+<span class="material-symbols-outlined text-primary text-4xl mb-4" data-icon="auto_awesome">auto_awesome</span>
+<h3 class="font-headline-md text-headline-md mb-2 text-primary">Balance</h3>
+<p class="text-on-surface-variant text-sm">Equating intensity with intentional recovery for long-term athletic health.</p>
+</div>
+<div class="glass-card p-8 rounded-xl border-outline-variant/30 mt-8 hover:translate-y-[-8px] transition-transform duration-500">
+<span class="material-symbols-outlined text-primary text-4xl mb-4" data-icon="precision_manufacturing">precision_manufacturing</span>
+<h3 class="font-headline-md text-headline-md mb-2 text-primary">Precision</h3>
+<p class="text-on-surface-variant text-sm">Every repetition is a movement meditation focused on perfect alignment.</p>
+</div>
+</div>
+</div>
+<!-- Fitness Specialties Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1: Strength -->
+<div class="group relative overflow-hidden rounded-xl h-[400px] shadow-[0_20px_40px_rgba(0,0,0,0.04)]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A professional fitness coach guiding a client through a heavy deadlift in a high-end, minimalist boutique gym. The lighting is dramatic and moody, highlighting muscle definition and focus. The aesthetic is clean and luxurious, with dark forest green and olive tones dominating the color palette. Soft morning light filters through large windows." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAUh6-zdVbqNw1kZ2Quchui9A5bQznugpyBQ37gQr6Kzab5CjTpqOSaY9juMAUHPFMLhsf1mge-toV0QaPaxhuU_3HAqhTQbT9avDLP8l2I261H8ja_YghEwtI6mm1rZYtO2KXexAfKmGCA5awaT0WFvFi6baq6q2SGzfLNYUxkArmSYYv3iBGdBitGZDby6_fTZIiE1d0WKLiLmW5aOVeUkKVMFJwP7tTpABDr2HGaCd7jlrpCahFEiBcKxkFBzUxgY6rAfO1xtXE')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 p-8">
+<h4 class="font-headline-md text-headline-md text-white mb-2">Strength Conditioning</h4>
+<p class="text-white/80 text-body-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">Progressive overload techniques designed for functional power and skeletal integrity.</p>
+</div>
+</div>
+<!-- Card 2: Functional -->
+<div class="group relative overflow-hidden rounded-xl h-[400px] shadow-[0_20px_40px_rgba(0,0,0,0.04)]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A dynamic shot of an athlete performing functional movement drills with battle ropes in a modern, spacious studio. The environment is minimalist with white walls and natural wood accents. Soft ambient lighting creates a serene yet energetic atmosphere. The color scheme features muted greens and earthy neutrals, reflecting a premium wellness brand identity." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCbLLo2e_eQuku44U_Np7Vv72tAgAulGb7-DYKNP4qmjZmUVvn3hHa7jj6AxwM_O2MoKMMBjefOY1kRUDzDxrOoxKQOS9gepfz2KCX_femsU4VXdv1Whc2Fi13UlqCXp5ojmALQ6rURvEmDBpmh6_K8YbfizDJhQWe1OJAie3f27s3nqbgSIO7S3ZXFjPhSPpelTxnkCDgx8QiZWpNiIv8NGrzFoStigXkTlm9VLJvj4yurh2CvXMjxaiSSsr_t4vRkdcNHhus6imc')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 p-8">
+<h4 class="font-headline-md text-headline-md text-white mb-2">Functional Training</h4>
+<p class="text-white/80 text-body-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">Real-world movement patterns that enhance daily life and athletic performance.</p>
+</div>
+</div>
+<!-- Card 3: Mobility -->
+<div class="group relative overflow-hidden rounded-xl h-[400px] shadow-[0_20px_40px_rgba(0,0,0,0.04)]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A tranquil scene of a fitness expert performing deep mobility stretches on a premium yoga mat. The setting is a minimalist retreat with floor-to-ceiling windows overlooking a lush forest. The lighting is soft and high-key, creating an airy, peaceful mood. The image focuses on flexibility and the intersection of yoga and fitness, using a refined olive green and off-white color palette." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCZ-M4MaWUiVYWKk34-wVwBsSX5W3izLWq3cgEnB_KjvyRfwZc-11_LymKUzuQZndDmrSgB2F5rxbSpl3gRYSV7xY3qOV8or4VaOVRX9cL2x4_4oVcriZ3Jm4D5VnN6k7NhWTWdygIEKzRAkq1Sb5TBdzlJuoHg0hE4m48ovzGbJc-_bAKpWSAjpPG1RH5qI1EeVY7BmoOd9V6UoTSodbcvac779-4L6KKjcnq4W2JgxgQtNQ9obsay7295lVwj-b3ff0rxX4xuRCg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 p-8">
+<h4 class="font-headline-md text-headline-md text-white mb-2">Mobility &amp; Recovery</h4>
+<p class="text-white/80 text-body-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">Joint health protocols and specialized recovery sessions for optimal body maintenance.</p>
+</div>
+</div>
+</div>
+<!-- Secondary Sections Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-24">
+<div class="md:col-span-2 glass-card p-10 rounded-xl flex items-center gap-8">
+<div class="bg-primary-container p-6 rounded-full text-on-primary-container">
+<span class="material-symbols-outlined text-5xl" data-icon="nutrition">nutrition</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-primary mb-2">Nutrition Guidance</h4>
+<p class="text-on-surface-variant">Personalized dietary frameworks that fuel performance and sustain long-term vitality.</p>
+</div>
+</div>
+<div class="glass-card p-10 rounded-xl text-center flex flex-col items-center justify-center">
+<span class="material-symbols-outlined text-primary text-5xl mb-4" data-icon="spa">spa</span>
+<h4 class="font-headline-md text-headline-md text-primary mb-2">Recovery</h4>
+<p class="text-on-surface-variant text-sm">Hydro &amp; Massage Therapy</p>
+</div>
+<div class="glass-card p-10 rounded-xl text-center flex flex-col items-center justify-center bg-primary text-on-primary">
+<span class="material-symbols-outlined text-4xl mb-4" data-icon="fitness_center">fitness_center</span>
+<h4 class="font-headline-md text-headline-md mb-2">Coaching</h4>
+<p class="opacity-80 text-sm">1-on-1 Personalized Elite Training</p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 7: SKILLS & EXPERIENCE -->
+<section class="py-section-gap bg-background relative">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-20">
+<span class="font-label-caps text-label-caps text-primary tracking-[0.2em] uppercase block mb-4">Competencies</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface">Experience &amp; Skills</h2>
+</div>
+<!-- Circular Progress Indicators Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-y-12 gap-x-8 mb-32">
+<!-- Fitness Training -->
+<div class="flex flex-col items-center text-center">
+<div class="circular-progress w-32 h-32 rounded-full flex items-center justify-center mb-4 transition-all duration-1000" style="--progress: 95">
+<span class="font-headline-md text-primary font-bold">95%</span>
+</div>
+<h5 class="font-body-md font-semibold text-on-surface">Fitness Training</h5>
+</div>
+<!-- MMA -->
+<div class="flex flex-col items-center text-center">
+<div class="circular-progress w-32 h-32 rounded-full flex items-center justify-center mb-4 transition-all duration-1000" style="--progress: 88">
+<span class="font-headline-md text-primary font-bold">88%</span>
+</div>
+<h5 class="font-body-md font-semibold text-on-surface">MMA</h5>
+</div>
+<!-- Muay Thai -->
+<div class="flex flex-col items-center text-center">
+<div class="circular-progress w-32 h-32 rounded-full flex items-center justify-center mb-4 transition-all duration-1000" style="--progress: 92">
+<span class="font-headline-md text-primary font-bold">92%</span>
+</div>
+<h5 class="font-body-md font-semibold text-on-surface">Muay Thai</h5>
+</div>
+<!-- Karate -->
+<div class="flex flex-col items-center text-center">
+<div class="circular-progress w-32 h-32 rounded-full flex items-center justify-center mb-4 transition-all duration-1000" style="--progress: 90">
+<span class="font-headline-md text-primary font-bold">90%</span>
+</div>
+<h5 class="font-body-md font-semibold text-on-surface">Karate</h5>
+</div>
+<!-- Strength Training -->
+<div class="flex flex-col items-center text-center">
+<div class="circular-progress w-32 h-32 rounded-full flex items-center justify-center mb-4 transition-all duration-1000" style="--progress: 85">
+<span class="font-headline-md text-primary font-bold">85%</span>
+</div>
+<h5 class="font-body-md font-semibold text-on-surface">Strength</h5>
+</div>
+<!-- Teaching -->
+<div class="flex flex-col items-center text-center">
+<div class="circular-progress w-32 h-32 rounded-full flex items-center justify-center mb-4 transition-all duration-1000" style="--progress: 98">
+<span class="font-headline-md text-primary font-bold">98%</span>
+</div>
+<h5 class="font-body-md font-semibold text-on-surface">Teaching</h5>
+</div>
+<!-- Mentoring -->
+<div class="flex flex-col items-center text-center">
+<div class="circular-progress w-32 h-32 rounded-full flex items-center justify-center mb-4 transition-all duration-1000" style="--progress: 94">
+<span class="font-headline-md text-primary font-bold">94%</span>
+</div>
+<h5 class="font-body-md font-semibold text-on-surface">Mentoring</h5>
+</div>
+<!-- Hydro Therapy -->
+<div class="flex flex-col items-center text-center">
+<div class="circular-progress w-32 h-32 rounded-full flex items-center justify-center mb-4 transition-all duration-1000" style="--progress: 82">
+<span class="font-headline-md text-primary font-bold">82%</span>
+</div>
+<h5 class="font-body-md font-semibold text-on-surface">Hydro Therapy</h5>
+</div>
+<!-- Massage Therapy -->
+<div class="flex flex-col items-center text-center">
+<div class="circular-progress w-32 h-32 rounded-full flex items-center justify-center mb-4 transition-all duration-1000" style="--progress: 80">
+<span class="font-headline-md text-primary font-bold">80%</span>
+</div>
+<h5 class="font-body-md font-semibold text-on-surface">Massage</h5>
+</div>
+<!-- Nutritional Counselling -->
+<div class="flex flex-col items-center text-center">
+<div class="circular-progress w-32 h-32 rounded-full flex items-center justify-center mb-4 transition-all duration-1000" style="--progress: 86">
+<span class="font-headline-md text-primary font-bold">86%</span>
+</div>
+<h5 class="font-body-md font-semibold text-on-surface">Nutrition</h5>
+</div>
+<!-- Communication -->
+<div class="flex flex-col items-center text-center">
+<div class="circular-progress w-32 h-32 rounded-full flex items-center justify-center mb-4 transition-all duration-1000" style="--progress: 96">
+<span class="font-headline-md text-primary font-bold">96%</span>
+</div>
+<h5 class="font-body-md font-semibold text-on-surface">Communication</h5>
+</div>
+</div>
+<!-- Achievements Title -->
+<div class="mb-12">
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Achievements</h3>
+<div class="h-1 w-24 bg-primary mt-2"></div>
+</div>
+<!-- Achievement Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Achievement 1 -->
+<div class="group glass-card p-10 rounded-xl relative overflow-hidden transition-all duration-500 hover:shadow-2xl">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-8xl" data-icon="military_tech">military_tech</span>
+</div>
+<div class="relative z-10">
+<span class="font-label-caps text-primary tracking-widest uppercase mb-4 block">Championship</span>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Runner-up MMA</h4>
+<p class="text-on-surface-variant mb-6">Regional Professional Mixed Martial Arts Championships - Welterweight Category.</p>
+<div class="flex items-center text-primary font-bold gap-2">
+<span class="material-symbols-outlined" data-icon="verified">verified</span>
+                                Certified Recognition
+                            </div>
+</div>
+</div>
+<!-- Achievement 2 -->
+<div class="group glass-card p-10 rounded-xl relative overflow-hidden transition-all duration-500 hover:shadow-2xl">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-8xl" data-icon="sports_martial_arts">sports_martial_arts</span>
+</div>
+<div class="relative z-10">
+<span class="font-label-caps text-primary tracking-widest uppercase mb-4 block">Striking Excellence</span>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Runner-up Muay Thai</h4>
+<p class="text-on-surface-variant mb-6">Open Invitational Striking Championship - Outstanding Technique Award.</p>
+<div class="flex items-center text-primary font-bold gap-2">
+<span class="material-symbols-outlined" data-icon="verified">verified</span>
+                                Technical Mastery
+                            </div>
+</div>
+</div>
+<!-- Achievement 3 -->
+<div class="group glass-card p-10 rounded-xl relative overflow-hidden bg-primary text-on-primary transition-all duration-500 hover:shadow-2xl">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-8xl" data-icon="rewarded_ads">rewarded_ads</span>
+</div>
+<div class="relative z-10">
+<span class="font-label-caps opacity-70 tracking-widest uppercase mb-4 block">Legacy</span>
+<h4 class="font-headline-md text-headline-md mb-2">Black Belt</h4>
+<p class="opacity-80 mb-6">Achieved 1st Dan Black Belt in Karate - Shotokan Style. Over 15 years of dedicated discipline.</p>
+<div class="flex items-center font-bold gap-2">
+<span class="material-symbols-outlined" data-icon="verified">verified</span>
+                                Lifetime Achievement
+                            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section with Leaf Divider Logic -->
+<section class="py-section-gap flex flex-col items-center justify-center text-center grain-texture">
+<div class="max-w-3xl px-margin-mobile">
+<span class="material-symbols-outlined text-primary text-6xl mb-8" data-icon="eco">eco</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">Ready to redefine your physical potential?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">Join a curated fitness experience designed for longevity, strength, and mindful movement.</p>
+<button class="bg-primary text-on-primary px-12 py-5 rounded-full font-label-caps uppercase tracking-widest hover:scale-105 transition-all duration-300 shadow-xl shadow-primary/20">Begin Your Transformation</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container-lowest py-section-gap px-margin-mobile md:px-margin-desktop flex flex-col items-center text-center gap-unit rounded-t-xl">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Srinivas Prasad R</h2>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-90 mb-8 max-w-lg">© 2024 Srinivas Prasad R. Balance • Strength • Mindfulness</p>
+<div class="flex gap-8 mb-12">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md" href="#">Instagram</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md" href="#">YouTube</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md" href="#">Privacy Policy</a>
+</div>
+<div class="w-16 h-px bg-outline-variant opacity-30"></div>
+</footer>
+<script>
+        // Micro-interaction: Scroll animations for progress circles
+        const observerOptions = {
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const circle = entry.target;
+                    const finalValue = circle.getAttribute('style').match(/--progress: (\d+)/)[1];
+                    let current = 0;
+                    const timer = setInterval(() => {
+                        if (current >= finalValue) {
+                            clearInterval(timer);
+                        } else {
+                            current++;
+                            circle.style.setProperty('--progress', current);
+                        }
+                    }, 10);
+                    observer.unobserve(circle);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.circular-progress').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body></html>

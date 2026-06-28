@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Srinivas Prasad R | Yoga &amp; Wellness</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#e4e2e1",
+                    "on-surface": "#1b1c1c",
+                    "on-error": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-background": "#1b1c1c",
+                    "background": "#fbf9f8",
+                    "surface-container": "#f0eded",
+                    "outline": "#767869",
+                    "tertiary-container": "#737573",
+                    "on-tertiary-container": "#fdfdfa",
+                    "primary-fixed-dim": "#bbcf7c",
+                    "on-primary-container": "#fbffe4",
+                    "on-secondary-fixed": "#00210c",
+                    "surface-container-low": "#f6f3f2",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#454745",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-bright": "#fbf9f8",
+                    "secondary-fixed": "#baefc2",
+                    "on-tertiary": "#ffffff",
+                    "primary": "#52621c",
+                    "inverse-primary": "#bbcf7c",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed-dim": "#c6c7c4",
+                    "secondary-container": "#b7edbf",
+                    "on-primary-fixed-variant": "#3d4c05",
+                    "on-surface-variant": "#46483b",
+                    "tertiary-fixed": "#e2e3e0",
+                    "primary-container": "#6a7c32",
+                    "outline-variant": "#c6c8b6",
+                    "surface": "#fbf9f8",
+                    "on-secondary-fixed-variant": "#20502e",
+                    "surface-container-highest": "#e4e2e1",
+                    "primary-fixed": "#d7ec95",
+                    "surface-tint": "#54651e",
+                    "surface-container-high": "#eae7e7",
+                    "surface-dim": "#dcd9d9",
+                    "secondary": "#386844",
+                    "tertiary": "#5b5c5a",
+                    "inverse-on-surface": "#f3f0f0",
+                    "inverse-surface": "#303030",
+                    "on-tertiary-fixed": "#1a1c1b",
+                    "on-primary": "#ffffff",
+                    "on-secondary-container": "#3d6d48",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed": "#161e00",
+                    "secondary-fixed-dim": "#9fd3a7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-desktop": "80px",
+                    "container-max": "1280px",
+                    "unit": "8px",
+                    "section-gap": "120px",
+                    "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Playfair Display"],
+                    "body-lg": ["Inter"],
+                    "display-lg": ["Playfair Display"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "body-md": ["Inter"],
+                    "label-caps": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "display-lg": ["80px", {"lineHeight": "96px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "400"}],
+                    "display-lg-mobile": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .parallax-bg {
+            transition: transform 0.1s ease-out;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/20 backdrop-blur-xl border-b border-white/20 shadow-[0_20px_40px_rgba(0,0,0,0.04)] transition-shadow duration-500">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-6">
+<span class="font-headline-md text-headline-md text-primary tracking-tight">Srinivas Prasad R</span>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary transition-all duration-300" href="#">Home</a>
+<a class="font-body-md text-body-md text-on-surface-variant opacity-80 hover:opacity-100 hover:text-primary transition-all duration-300" href="#">Yoga</a>
+<a class="font-body-md text-body-md text-on-surface-variant opacity-80 hover:opacity-100 hover:text-primary transition-all duration-300" href="#">Fitness</a>
+<a class="font-body-md text-body-md text-on-surface-variant opacity-80 hover:opacity-100 hover:text-primary transition-all duration-300" href="#">Gallery</a>
+<a class="font-body-md text-body-md text-on-surface-variant opacity-80 hover:opacity-100 hover:text-primary transition-all duration-300" href="#">Contact</a>
+</div>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-label-caps uppercase tracking-widest hover:bg-primary-container transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                Book a Session
+            </button>
+</div>
+</nav>
+<main>
+<!-- Full-screen Parallax Hero -->
+<section class="relative min-h-screen flex items-center pt-24 overflow-hidden">
+
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full grid grid-cols-1 md:grid-cols-12 gap-gutter items-center relative z-10">
+<!-- Left Side: Profile Image -->
+<div class="md:col-span-5 relative group reveal">
+<div class="aspect-[4/5] overflow-hidden rounded-xl glass-card p-2">
+<img class="w-full h-full object-cover rounded-lg parallax-bg scale-110" data-alt="A professional, high-end editorial portrait of Srinivas Prasad R, a yoga instructor with a calm and confident expression. He is wearing minimalist athletic wear in olive green. The setting is a bright, sun-drenched minimalist yoga studio with warm wooden floors and soft white walls. The lighting is soft and cinematic, highlighting his athletic build and serene presence. The overall mood is luxury wellness, tranquil and professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrPGoXf9pDWeUl3F7H3FQiK2_wTVyttBXSx_JL1XlIlbG1TDaSv1w6fhW8FWk50JQOKo5117xHsx3pSNctfrjTvDyTYleS62ohSeaca5FE02y1dxILAI5703mOQO9ssbjLaecni57AGeUTAWWwY2ler6h5WFJVZ3Ft3NYHuLSgKzd9gvo_lFPyv53FrCTEI-RjGy1AkSRUGadbd_MgA6P9axBPSt3_PzODpiwOIUNg0QpOtK5BNeRBjmj4KmoK2J4X1YBvlqqNUpI"/>
+</div>
+<!-- Leaf Motif Overlay -->
+<div class="absolute -bottom-8 -right-8 w-32 h-32 opacity-20 pointer-events-none transform rotate-12">
+<svg class="text-primary" fill="currentColor" viewbox="0 0 100 100">
+<path d="M50 0C50 0 50 40 10 50C50 60 50 100 50 100C50 100 50 60 90 50C50 40 50 0 50 0Z"></path>
+</svg>
+</div>
+</div>
+<!-- Right Side: Typography -->
+<div class="md:col-span-7 flex flex-col items-start gap-6 reveal" style="transition-delay: 200ms;">
+<div class="space-y-2">
+<span class="font-label-caps text-label-caps text-primary tracking-[0.3em] uppercase">Elegance in Motion</span>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background font-bold leading-tight">
+                            SRINIVAS PRASAD R
+                        </h1>
+<p class="font-headline-md text-headline-md text-primary-container italic">
+                            Yoga Instructor • Yoga Therapist • Fitness Trainer
+                        </p>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
+                        Dynamic Yoga Instructor and Yoga Therapist passionate about holistic wellness, therapeutic yoga, strength training and mindful living. Helping you find balance in a chaotic world.
+                    </p>
+<div class="flex flex-wrap gap-4 mt-4">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-full font-label-caps uppercase tracking-widest hover:shadow-2xl transition-all duration-500 flex items-center gap-2 group">
+                            Download Resume
+                            <span class="material-symbols-outlined text-lg group-hover:translate-y-1 transition-transform">download</span>
+</button>
+<button class="border border-primary text-primary px-10 py-4 rounded-full font-label-caps uppercase tracking-widest hover:bg-primary/5 transition-all duration-500">
+                            Contact
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section (Glassmorphism Cards) -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<!-- Stat Card 1 -->
+<div class="glass-card p-8 rounded-xl text-center flex flex-col items-center gap-2 reveal">
+<span class="material-symbols-outlined text-4xl text-primary mb-2">history</span>
+<h3 class="font-display-lg-mobile text-headline-lg text-on-background font-bold counter" data-target="8">0</h3>
+<p class="font-label-caps text-on-surface-variant">Years Experience</p>
+</div>
+<!-- Stat Card 2 -->
+<div class="glass-card p-8 rounded-xl text-center flex flex-col items-center gap-2 reveal" style="transition-delay: 100ms;">
+<span class="material-symbols-outlined text-4xl text-primary mb-2">military_tech</span>
+<h3 class="font-display-lg-mobile text-headline-lg text-on-background font-bold counter" data-target="12">0</h3>
+<p class="font-label-caps text-on-surface-variant">National Awards</p>
+</div>
+<!-- Stat Card 3 -->
+<div class="glass-card p-8 rounded-xl text-center flex flex-col items-center gap-2 reveal" style="transition-delay: 200ms;">
+<span class="material-symbols-outlined text-4xl text-primary mb-2">self_improvement</span>
+<h3 class="font-display-lg-mobile text-headline-lg text-on-background font-bold counter" data-target="15">0</h3>
+<p class="font-label-caps text-on-surface-variant">Yoga Styles</p>
+</div>
+<!-- Stat Card 4 -->
+<div class="glass-card p-8 rounded-xl text-center flex flex-col items-center gap-2 reveal" style="transition-delay: 300ms;">
+<span class="material-symbols-outlined text-4xl text-primary mb-2">fitness_center</span>
+<h3 class="font-display-lg-mobile text-headline-lg text-on-background font-bold counter" data-target="10">0</h3>
+<p class="font-label-caps text-on-surface-variant">Fitness Disciplines</p>
+</div>
+</div>
+</div>
+</section>
+<!-- About & Timeline Section -->
+<section class="py-section-gap relative">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-start">
+<!-- Content Left -->
+<div class="space-y-12 reveal">
+<div class="space-y-6">
+<h2 class="font-headline-lg text-headline-lg text-on-background">A Journey of <br/><span class="text-primary italic">Mind &amp; Body</span></h2>
+<div class="w-20 h-1 bg-primary rounded-full"></div>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                                With a foundation in both ancient yogic sciences and modern therapeutic approaches, my practice bridges the gap between traditional wisdom and contemporary fitness needs. My goal is to empower individuals through movement, breathwork, and structured strength training, fostering a lifestyle of sustainable health and mental clarity.
+                            </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary-fixed">spa</span>
+</div>
+<div>
+<h4 class="font-body-md font-bold text-on-background">Therapeutic Yoga</h4>
+<p class="text-sm text-on-surface-variant">Specialized protocols for recovery and chronic pain management.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary-fixed">bolt</span>
+</div>
+<div>
+<h4 class="font-body-md font-bold text-on-background">Strength Training</h4>
+<p class="text-sm text-on-surface-variant">Functional movements designed to build resilient bodies.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Timeline Right -->
+<div class="relative reveal" style="transition-delay: 200ms;">
+<h3 class="font-headline-md text-headline-md mb-12 text-on-background">Educational Excellence</h3>
+<div class="relative border-l-2 border-primary/20 ml-4 space-y-12">
+<!-- Timeline Item 1 -->
+<div class="relative pl-10">
+<div class="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-primary ring-4 ring-background"></div>
+<div class="glass-card p-6 rounded-xl hover:translate-x-2 transition-transform duration-300">
+<span class="font-label-caps text-primary mb-1 block">Post Graduation</span>
+<h4 class="font-body-lg font-bold text-on-background">M.Sc Yoga Therapy</h4>
+<p class="text-on-surface-variant text-sm mt-2 opacity-80 italic leading-relaxed">Advanced study of physiological and psychological healing through yoga practices.</p>
+</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative pl-10">
+<div class="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-primary ring-4 ring-background"></div>
+<div class="glass-card p-6 rounded-xl hover:translate-x-2 transition-transform duration-300">
+<span class="font-label-caps text-primary mb-1 block">Post Graduation</span>
+<h4 class="font-body-lg font-bold text-on-background">MCA Cyber Security</h4>
+<p class="text-on-surface-variant text-sm mt-2 opacity-80 italic leading-relaxed">Merging technical precision with wellness for a modern holistic approach.</p>
+</div>
+</div>
+<!-- Timeline Item 3 -->
+<div class="relative pl-10">
+<div class="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-primary ring-4 ring-background"></div>
+<div class="glass-card p-6 rounded-xl hover:translate-x-2 transition-transform duration-300">
+<span class="font-label-caps text-primary mb-1 block">Professional Training</span>
+<h4 class="font-body-lg font-bold text-on-background">Diploma in Yogic Sciences</h4>
+<p class="text-on-surface-variant text-sm mt-2 opacity-80 italic leading-relaxed">Classical yoga training covering philosophy, asanas, and pranayama.</p>
+</div>
+</div>
+<!-- Timeline Item 4 -->
+<div class="relative pl-10">
+<div class="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-primary ring-4 ring-background"></div>
+<div class="glass-card p-6 rounded-xl hover:translate-x-2 transition-transform duration-300">
+<span class="font-label-caps text-primary mb-1 block">Under Graduation</span>
+<h4 class="font-body-lg font-bold text-on-background">BCA</h4>
+<p class="text-on-surface-variant text-sm mt-2 opacity-80 italic leading-relaxed">Laying the foundation for analytical thinking and systematic instruction.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Leaf Divider -->
+<div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 opacity-10">
+<svg class="text-primary" height="200" viewbox="0 0 100 100" width="200">
+<path d="M50 0 C60 20 80 40 80 60 C80 80 65 95 50 95 C35 95 20 80 20 60 C20 40 40 20 50 0" fill="currentColor"></path>
+</svg>
+</div>
+</section>
+<!-- Newsletter / Contact Teaser -->
+<section class="py-24 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop reveal">
+<div class="bg-primary-container rounded-3xl p-12 md:p-24 flex flex-col items-center text-center gap-8 relative overflow-hidden">
+
+<h2 class="font-headline-lg text-headline-lg text-on-primary-container relative z-10">Ready to transform your <span class="italic font-light">lifestyle?</span></h2>
+<p class="font-body-lg text-on-primary-container/80 max-w-2xl relative z-10">
+                    Join my community and receive weekly insights on mindfulness, fitness routines, and therapeutic yoga sessions.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 w-full max-w-md relative z-10">
+<input class="flex-grow bg-white/10 border-b border-white/30 text-white placeholder:text-white/50 focus:border-white focus:ring-0 transition-colors py-4 px-0 font-body-md outline-none" placeholder="Enter your email" type="email"/>
+<button class="bg-white text-primary px-8 py-4 rounded-full font-label-caps uppercase tracking-widest hover:bg-surface-variant transition-colors whitespace-nowrap">Subscribe</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap px-margin-mobile md:px-margin-desktop flex flex-col items-center text-center gap-unit bg-surface-container-lowest rounded-t-xl opacity-90">
+<span class="font-headline-lg text-headline-lg text-primary mb-6">Srinivas Prasad R</span>
+<div class="flex gap-8 mb-12">
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Instagram</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">LinkedIn</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">YouTube</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Privacy Policy</a>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-60">
+            © 2024 Srinivas Prasad R. Balance • Strength • Mindfulness
+        </p>
+</footer>
+<script>
+        // Scroll Reveal Animation
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Parallax Effect for Hero Image
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.parallax-bg');
+            parallaxElements.forEach(el => {
+                const speed = 0.4;
+                el.style.transform = `translateY(${scrolled * speed}px) scale(1.1)`;
+            });
+        });
+
+        // Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    const target = +entry.target.getAttribute('data-target');
+                    const count = +entry.target.innerText;
+                    const increment = target / 50;
+
+                    if(count < target) {
+                        const updateCount = () => {
+                            const current = +entry.target.innerText;
+                            if(current < target) {
+                                entry.target.innerText = Math.ceil(current + increment);
+                                setTimeout(updateCount, 40);
+                            } else {
+                                entry.target.innerText = target + '+';
+                            }
+                        };
+                        updateCount();
+                    }
+                }
+            });
+        }, { threshold: 0.5 });
+
+        counters.forEach(counter => counterObserver.observe(counter));
+    </script>
+</body></html>
