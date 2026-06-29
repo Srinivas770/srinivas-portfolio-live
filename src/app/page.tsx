@@ -177,7 +177,7 @@ export default function Home() {
                 <div className="relative border-l-2 border-primary/20 ml-4 space-y-10">
                   {[
                     { level: "Post Graduation", degree: "M.Sc Yoga Therapy", desc: "Advanced study of physiological and psychological healing through yoga practices." },
-                    { level: "Post Graduation", degree: "MCA Cyber Security", desc: "Merging technical precision with wellness for a modern holistic approach." },
+                    { level: "Post Graduation", degree: "MCA Cyber Security", desc: "Laying the foundation for secure systems, analytical thinking, and cyber defense." },
                     { level: "Professional Training", degree: "Diploma in Yogic Sciences", desc: "Classical yoga training covering philosophy, asanas, and pranayama." },
                     { level: "Under Graduation", degree: "BCA", desc: "Laying the foundation for analytical thinking and systematic instruction." },
                   ].map((item, i) => (
