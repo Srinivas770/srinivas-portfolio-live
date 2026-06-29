@@ -58,7 +58,7 @@ export default function Gallery() {
   ];
 
   const milestones = [
-    { num: "01", label: "Championship", title: "National Yoga Olympics", desc: "Top honors at the premier national gathering for yoga excellence, demonstrating superior postural precision." },
+    { num: "01", label: "Championship", title: "Himalaya Yoga Olympiad", desc: "Top honors at the premier national gathering for yoga excellence, demonstrating superior postural precision." },
     { num: "02", label: "Achievements", title: "25+ Compitations", desc: "Consistent high performance across various compitations, validating mastery and focus." },
     { num: "03", label: "Research", title: "Osteoarthritis Study", desc: "In-depth focusing on the therapeutic effects of specific asanas on joint health." },
     { num: "04", label: "Certification", title: "300hr Instructor", desc: "Advanced certification covering philosophy, anatomy, and advanced practice methods." },
