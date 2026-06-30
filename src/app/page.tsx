@@ -222,7 +222,7 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                 </svg>
                 <span className="font-label-caps text-xs text-on-surface-variant tracking-wider uppercase font-bold">Email Me</span>
-                <span className="text-xs font-bold text-on-background break-all">srinivasprasad770.sp</span>
+                <span className="text-xs font-bold text-on-background break-all">srinivasprasad770.sp@gmail.com</span>
               </a>
               {/* Instagram */}
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="glass-card p-5 rounded-2xl flex flex-col items-center gap-3 transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer">
