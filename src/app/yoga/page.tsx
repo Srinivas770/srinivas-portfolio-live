@@ -97,7 +97,7 @@ export default function Yoga() {
             <div className="flex flex-col gap-10 md:gap-16">
               {[
                 {
-                  period: "2023 — Present", sub: null,
+                  period: "2023 — 2024", sub: null,
                   icon: "distance", role: "Online Yoga Instructor", sub2: "Digital Transformation Specialist",
                   desc: "Crafting immersive virtual wellness experiences for global clients. Leveraging high-definition streaming and interactive feedback loops to ensure studio-quality instruction in a home environment.",
                   tags: ["Live Sessions", "Custom Flows", "Posture Correction"],
